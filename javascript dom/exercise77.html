@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+}
+
+#flagImage {
+    margin-top: 20px;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #000;
+}
+
+  </style>
+</head>
+<body>
+    <select id="countrySelect" onchange="change()">
+        <option value="norway">Norway</option>
+        <option value="swedan">swedan</option>
+        <option value="denmark">denmark</option>
+    </select>
+    <br>
+    <img id="flagImage"  alt="Country Flag">
+    <script>
+        function change() {
+    const countrySelect = document.getElementById('countrySelect');
+    const flagImage = document.getElementById('flagImage');
+
+    switch (countrySelect.value) {
+        case 'norway':
+            flagImage.src = 'file:///C:/Users/Orange/Desktop/javascript%20dom/flags/norway.png.jpg';
+            flagImage.alt = 'Norway Flag';
+            break;
+        case 'swedan':
+            flagImage.src = 'file:///C:/Users/Orange/Desktop/javascript%20dom/flags/sweden.png.jpg';
+            flagImage.alt = 'swedan Flag';
+            break;
+        case 'denmark':
+            flagImage.src = 'file:///C:/Users/Orange/Desktop/javascript%20dom/flags/denmark.png.jpg';
+            flagImage.alt = 'denmark Flag';
+            break;
+        default:
+            flagImage.src = '';
+            flagImage.alt = 'No Flag Selected';
+    }
+}
+
+    </script>
+</body>
+</html>
+
